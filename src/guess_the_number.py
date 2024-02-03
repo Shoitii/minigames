@@ -12,9 +12,9 @@ def guess(x):
       print('Try again. Too high')
     count += 1
   if count > 1:
-    print(f'Congrats! You guessed the correct number in {count} tries \033[33m({random_num})\033[m')
+    print(f'Congrats! You guessed the correct number\033[33m({random_num})\033[m in {count} tries')
   else:
-    print(f'Congrats! You guessed the correct number in {count} try \033[33m({random_num}\033[m')
+    print(f'Congrats! You guessed the correct number\033[33m({random_num})\033[min {count} try')
 
 
 guess(10)
