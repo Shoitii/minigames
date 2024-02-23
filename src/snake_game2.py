@@ -68,18 +68,20 @@ class Main:
                 self.game_over()
 
     def game_over(self):
-        print('game over')
+        print('GAME OVER')
+        print(f'SCORE: {len(main_game.snake.body)-3}')
         pygame.quit()
         sys.exit()
 
 pygame.init()
 clock = pygame.time.Clock()
-width = 800
-height = 800
+width = 20*40
+height = 20*40
 screen = pygame.display.set_mode((width, height))
 main_game = Main()
 SCREEN_UPDATE = pygame.USEREVENT
 pygame.time.set_timer(SCREEN_UPDATE, 150)
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -104,4 +106,4 @@ while True:
     screen.fill((175,215,70))
     main_game.draw_elements()
     pygame.display.update()
-    clock.tick(60)
+    clock.tick(144)
